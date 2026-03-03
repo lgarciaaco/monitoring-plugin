@@ -4,7 +4,7 @@ install-frontend:
 
 .PHONY: install-frontend-ci
 install-frontend-ci:
-	cd web && npm ci --omit=optional --ignore-scripts
+	cd web && npm ci --loglevel=verbose --omit=optional --ignore-scripts
 
 .PHONY: install-frontend-ci-clean
 install-frontend-ci-clean: install-frontend-ci
@@ -51,7 +51,6 @@ start-backend:
 .PHONY: build-image
 build-image:
 	./scripts/build-image.sh
-
 
 .PHONY: install
 install:
